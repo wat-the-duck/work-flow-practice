@@ -1,0 +1,18 @@
+{{#unless books}}
+  <p>There are no books.  .</p>
+{{else}}
+  <br/>
+  <table border="1">
+    <tr><th>Name</th><th>URL</th></tr>
+  {{#each books as |book|}}
+    <tr class="calendar-row"  data-data-obj="{{JSONtoString book}}">
+      <td>
+        {{book.title}}
+      </td>
+       <td>
+        {{book.author}}
+      </td>
+    </tr>
+  {{/each}}
+  </table>
+{{/unless}}
